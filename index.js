@@ -5,12 +5,11 @@ let findMatching = (arr, str) => {
 
 let fuzzyMatch = (arr, str) => {
   return arr.filter(driver => {
-   driver.includes(str);
+    // driver.toUpperCase().includes(str.toUpperCase()) === true;
+    console.log(driver.toUpperCase().includes(str.toUpperCase()));
   });
 };
 
 let matchName = (arr, str) => {
-  return arr.filter(driver => {
-    driver.name === str;
-  });
+  return arr.filter(driver => driver.name === str);
 };
