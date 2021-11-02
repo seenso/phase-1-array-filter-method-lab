@@ -4,10 +4,7 @@ let findMatching = (arr, str) => {
 };
 
 let fuzzyMatch = (arr, str) => {
-  return arr.filter(driver => {
-    // driver.toUpperCase().includes(str.toUpperCase()) === true;
-    console.log(driver.toUpperCase().includes(str.toUpperCase()));
-  });
+  return arr.filter(driver => driver.slice(0, str.length) === str);
 };
 
 let matchName = (arr, str) => {
